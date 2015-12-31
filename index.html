@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Julian Rosenblum">
+
+  <title>Julian Rosenblum | Sketchpad</title>
+
+  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link href="http://julianrosenblum.com/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Game CSS -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="http://julianrosenblum.com/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Sketchpad <small>by <a href="http://julianrosenblum.com/">Julian Rosenblum</a></small></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="well app">
+            <canvas class="sketchpad" id="canvas" width="500" height="500">Your browser does not support canvas.</canvas>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="well">
+            <label for="sketchbg">Background color: </label><input type="text" id="sketchbg" size="6" value="#fff" /><br />
+            <label for="color">Brush color: </label><input type="text" id="color" size="6" value="#000" /><br />
+            <label for="size">Brush size: </label><select id="size">
+              <option value="1">1px</option>
+              <option value="2">2px</option>
+              <option value="4">4px</option>
+              <option value="6">6px</option>
+              <option value="8">8px</option>
+              <option value="12">12px</option>
+              <option value="16">16px</option>
+              <option value="20">20px</option>
+              <option value="24">24px</option>
+              <option value="30">30px</option>
+              <option value="36">36px</option>
+              <option value="48">48px</option>
+              <option value="60">60px</option>
+            </select><br />
+            <label for="tool">Tool: </label><select id="tool">
+              <option value="draw">Draw</option>
+              <option value="erase">Erase</option>
+              <option value="shape">Shape</option>
+            </select><br />
+            <div id="shapeTools" style="display: none">
+              <label for="shapeType">Shape: </label><select id="shapeType">
+                <option value="rect">Rectangle</option>
+                <option value="circle">Circle</option>
+                <option value="line">Line</option>
+              </select><br />
+              <label for="shapeFill">Fill: </label><select id="shapeFill">
+                <option value="solid">Solid</option>
+                <option value="hollow">Hollow</option>
+              </select>
+            </div>
+            <div class="btn btn-warning" id="undo">Undo</div> <div class="btn btn-danger" id="clear">Clear</div> <div class="btn btn-info" id="save">Save</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- jQuery -->
+  <script src="http://julianrosenblum.com/js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="http://julianrosenblum.com/js/bootstrap.min.js"></script>
+
+  <!-- Game Scripts -->
+  <script src="http://julianrosenblum.com/js/canvasplus.js"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>
